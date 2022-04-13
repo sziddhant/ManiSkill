@@ -116,3 +116,41 @@ register(
     entry_point='mani_skill.env.push_chair:PushChairEnv',
     kwargs={'override_model_file': ('chair', 'chair_models_custom_split_example.yml')}
 )
+
+
+################################################################
+# OpenCabinetDoorReach
+################################################################
+
+register(
+    id='OpenCabinetDoorReach-v0',
+    entry_point='mani_skill.env.reach:OpenCabinetDoorReachEnv',
+)
+
+################################################################
+# OpenCabinetDoorReachFixed
+################################################################
+
+register(
+    id='OpenCabinetDoorReachFixed-v0',
+    entry_point='mani_skill.env.reach:OpenCabinetDoorReachFixedEnv',
+)
+# # cabinet_door_ids = get_model_ids_from_yaml(cabinet_door_model_file)
+# cabinet_door_infos = get_raw_yaml(cabinet_door_model_file)
+
+# for cabinet_id in cabinet_door_infos:
+#     register(
+#         id='OpenCabinetDoor_{:s}-v0'.format(cabinet_id),
+#         entry_point='mani_skill.env.open_cabinet_door_drawer:OpenCabinetDoorEnv',
+#         kwargs={'variant_config': {"partnet_mobility_id": cabinet_id},
+#         }
+#     )
+
+#     for fixed_target_link_id in range(cabinet_door_infos[cabinet_id]['num_target_links']):
+#         register(
+#             id='OpenCabinetDoor_{:s}_link_{:d}-v0'.format(cabinet_id, fixed_target_link_id),
+#             entry_point='mani_skill.env.open_cabinet_door_drawer:OpenCabinetDoorEnv',
+#             kwargs={'variant_config': {"partnet_mobility_id": cabinet_id},
+#                     'fixed_target_link_id': fixed_target_link_id,
+#             }
+#         )

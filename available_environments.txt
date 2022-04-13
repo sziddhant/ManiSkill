@@ -1,3 +1,5 @@
+OpenCabinetDoorReach-v0
+OpenCabinetDoorReachFixed-v0
 OpenCabinetDoor-v0
 OpenCabinetDoor_1000-v0
 OpenCabinetDoor_1000_link_0-v0
